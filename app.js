@@ -21,7 +21,7 @@ mostrarNaTela(`O consumo necessário é ${consumoNecessarioLitros} litros`);
 let quantidadePostos = parseInt(prompt("Em quantos postos você pesquisou?"));
 console.log(`Quantidade de postos: ${quantidadePostos}`);
 
-let valoresPesquisados = 0;
+let valoresPesquisados;
 let contador = 1;
 let valorMenor = Infinity;
 let somaTotal = 0;
