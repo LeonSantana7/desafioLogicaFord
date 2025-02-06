@@ -1,60 +1,40 @@
-// Função para mostar na texto tela 
-function mostrarNaTela (texto) {
-    document.write(texto + "<br> <br> " );
+// Função para mostrar na tela
+function mostrarNaTela(texto) {
+    document.write(texto + "<br><br>");
 }
 
-// Deve ser solicitado ao usuário a distância percorrida de sua casa até seu trabalho (em km). 
-let distanciaPercorrida;
-let entradaValida = false;
+// Função para validar entradas
+function validarEntrada(mensagem, tipo = 'float') {
+    let entradaValida = false;
+    let valor;
 
-while (!entradaValida) {
-    let entrada = prompt('Qual a distância percorrida da sua casa até seu trabalho? (Em km)');
-    distanciaPercorrida = parseFloat(entrada);
+    while (!entradaValida) {
+        let entrada = prompt(mensagem);
+        if (tipo === 'int') {
+            valor = parseInt(entrada);
+        } else {
+            valor = parseFloat(entrada);
+        }
 
-    if (isNaN(distanciaPercorrida) || distanciaPercorrida <= 0) {
-        alert("Você não digitou um número válido! Por favor, insira um número positivo.");
-    } else {
-        entradaValida = true; 
+        if (isNaN(valor) || valor <= 0) {
+            alert("Você não digitou um número válido! Por favor, insira um número positivo.");
+        } else {
+            entradaValida = true;
+        }
     }
+    return valor;
 }
 
-alert(`A distância percorrida é ${distanciaPercorrida.toFixed(2)} km.`);
+// Solicita a distância percorrida
+let distanciaPercorrida = validarEntrada('Qual a distância percorrida da sua casa até seu trabalho? (Em km)');
 
-
-let consumoMedio;
-entradaValida = false; 
-
-while (!entradaValida) {
-    let entrada = prompt("Qual o consumo médio do seu veículo? (em km/L)");
-    consumoMedio = parseFloat(entrada);
-
-    if (isNaN(consumoMedio) || consumoMedio <= 0) {
-        alert("Você não digitou um número válido! Por favor, insira um número positivo.");
-    } else {
-        entradaValida = true; 
-    }
-}
-console.log(`Consumo médio: ${consumoMedio} km/L`);
+// Solicita o consumo médio do veículo
+let consumoMedio = validarEntrada("Qual o consumo médio do seu veículo? (em km/L)");
 
 let consumoNecessarioLitros = distanciaPercorrida / consumoMedio;
-
-console.log(`Consumo necessário: ${consumoNecessarioLitros} litros`);
 mostrarNaTela(`O consumo necessário é ${consumoNecessarioLitros.toFixed(2)} litros`);
 
-// Deve ser solicitada ao usuário a quantidade de postos de combustíveis pesquisados e seus respetivos valores.
-let quantidadePostos;
-entradaValida = false; 
-
-while (!entradaValida) {
-    let entrada = prompt("Em quantos postos você pesquisou?");
-    quantidadePostos = parseInt(entrada);
-
-    if (isNaN(quantidadePostos) || quantidadePostos <= 0) {
-        alert("Você não digitou um número válido! Por favor, insira um número positivo.");
-    } else {
-        entradaValida = true; 
-    }
-}
+let quantidadePostos = validarEntrada("Em quantos postos você pesquisou?", 'int');
 
 let valoresPesquisados;
 let contador = 1;
@@ -62,25 +42,19 @@ let valorMenor = Infinity;
 let somaTotal = 0;
 
 while (contador <= quantidadePostos) {
-    valoresPesquisados = parseFloat(prompt(`Digite o valor encontrado (em R$) no posto ${contador}`));
-    somaTotal = somaTotal + valoresPesquisados;
-    console.log(`Os valores pesquisados são: ${valoresPesquisados}`);
-    if(valoresPesquisados < valorMenor){
+    valoresPesquisados = validarEntrada(`Digite o valor encontrado (em R$) no posto ${contador}`);
+    somaTotal += valoresPesquisados;
+
+    if (valoresPesquisados < valorMenor) {
         valorMenor = valoresPesquisados;
     }
-    contador ++;
+    contador++;
 }
-console.log(`Soma total: ${somaTotal}`);
-console.log(`O menor valor é ${valorMenor}`);
 
-mostrarNaTela(`O menor valor pesquisado é R$ ${valorMenor.toFixed(2)}`)
+mostrarNaTela(`O menor valor pesquisado é R$ ${valorMenor.toFixed(2)}`);
 
-let media = parseFloat(somaTotal / quantidadePostos);
-
+let media = somaTotal / quantidadePostos;
 mostrarNaTela(`A média dos valores pesquisados é R$ ${media.toFixed(2)}`);
 
-let gastoDiario = parseFloat(2 * (consumoNecessarioLitros * valorMenor));
-
+let gastoDiario = 2 * (consumoNecessarioLitros * valorMenor);
 mostrarNaTela(`O gasto diário (ida e volta) é R$ ${gastoDiario.toFixed(2)}`);
-
-
