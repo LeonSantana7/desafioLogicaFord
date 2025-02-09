@@ -1,7 +1,9 @@
 # 🚗 Cálculo de Consumo de Combustível e Gasto Diário
 
-## 📌 Descrição do Projeto (Acadêmico) 
+## 📌 Descrição do Projeto (Acadêmico)
 Este projeto tem como objetivo auxiliar os colaboradores da FORD a calcularem o consumo de combustível e o gasto diário para deslocamento ao trabalho, além de encontrar o posto com o combustível mais barato e calcular a média de preços na região. O programa solicita informações do usuário e realiza os cálculos automaticamente.
+
+🔗 **Acesse o projeto aqui:** [Cálculo de Consumo de Combustível](https://leonsantana7.github.io/desafioLogicaFord/)
 
 ## 🛠️ Instalação e Execução
 
@@ -28,7 +30,6 @@ Basta abrir o arquivo `index.html` em qualquer navegador compatível para utiliz
 - Calcula a média de preços na região;
 - Calcula o gasto diário com combustível baseado no menor valor pesquisado;
 - Previne erros na entrada de dados, como valores inválidos.
-
 
 ## 📂 Estrutura do Arquivo
 
