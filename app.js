@@ -1,4 +1,4 @@
-//  exibir a mensagem na tela
+// exibir a mensagem na tela
 function mostrarTela(tag, texto) {
     let elemento = document.querySelector(tag);
     if (elemento) {
@@ -6,7 +6,7 @@ function mostrarTela(tag, texto) {
     }
 }
 
-//  validar entradas
+// validar entradas
 function validarEntrada(tipo = 'float') {
     let entradaValida = false;
     let valor;
@@ -19,7 +19,6 @@ function validarEntrada(tipo = 'float') {
             valor = parseFloat(entrada);
         }
 
-
         if (isNaN(valor) || valor <= 0) {
             mostrarTela("#mensagem", "Você não digitou um número válido! Por favor, insira um número positivo.");
             return null;
@@ -31,9 +30,14 @@ function validarEntrada(tipo = 'float') {
 
 let distancia, consumo, consumoLitros, postos, valorMenor = Infinity, somaTotal = 0, med, gastos;
 
-//  limpar a caixa de entrada
+// limpar a caixa de entrada
 function limparEntrada() {
     document.getElementById("inputValor").value = "";
+}
+
+// Função principal que inicia o cálculo
+function iniciarCalculo() {
+    distanciaPercorrida();
 }
 
 // Solicita a distância percorrida
