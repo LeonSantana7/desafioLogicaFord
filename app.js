@@ -35,7 +35,7 @@ function limparEntrada() {
     document.getElementById("inputValor").value = "";
 }
 
-// Função principal que inicia o cálculo
+// inicia o cálculo
 function iniciarCalculo() {
     distanciaPercorrida();
 }
