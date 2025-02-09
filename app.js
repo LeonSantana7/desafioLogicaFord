@@ -1,4 +1,4 @@
-// Função para exibir a mensagem na tela
+//  exibir a mensagem na tela
 function mostrarTela(tag, texto) {
     let elemento = document.querySelector(tag);
     if (elemento) {
@@ -6,7 +6,7 @@ function mostrarTela(tag, texto) {
     }
 }
 
-// Função para validar entradas
+//  validar entradas
 function validarEntrada(tipo = 'float') {
     let entradaValida = false;
     let valor;
@@ -19,19 +19,19 @@ function validarEntrada(tipo = 'float') {
             valor = parseFloat(entrada);
         }
 
-        // Verifica se a entrada é um número válido e maior que zero
+
         if (isNaN(valor) || valor <= 0) {
             mostrarTela("#mensagem", "Você não digitou um número válido! Por favor, insira um número positivo.");
             return null;
         }
-        entradaValida = true; // Se o valor for válido, sai do loop
+        entradaValida = true;
     }
     return valor;
 }
 
 let distancia, consumo, consumoLitros, postos, valorMenor = Infinity, somaTotal = 0, med, gastos;
 
-// Função para limpar a caixa de entrada
+//  limpar a caixa de entrada
 function limparEntrada() {
     document.getElementById("inputValor").value = "";
 }
@@ -52,8 +52,8 @@ function distanciaPercorrida() {
             mostrarTela("#mensagem", `Você informou: ${distancia} km`);
             input.style.display = 'none';
             botaoConfirmar.style.display = 'none';
-            limparEntrada(); // Limpa a caixa de entrada
-            consumoMedio(); // Chama a próxima função
+            limparEntrada();
+            consumoMedio();
         }
     };
 }
@@ -73,8 +73,8 @@ function consumoMedio() {
             mostrarTela("#mensagem", `Você informou: ${consumo} km/L`);
             input.style.display = 'none';
             botaoConfirmar.style.display = 'none';
-            limparEntrada(); // Limpa a caixa de entrada
-            consumoNecessario(); // Chama a próxima função
+            limparEntrada();
+            consumoNecessario();
         }
     };
 }
@@ -83,7 +83,7 @@ function consumoMedio() {
 function consumoNecessario() {
     consumoLitros = distancia / consumo;
     mostrarTela("#mensagem", `Você precisará de ${consumoLitros.toFixed(2)} litros de combustível para o trajeto.`);
-    quantidadePostos(); // Chama a próxima função
+    quantidadePostos();
 }
 
 // Solicita a quantidade de postos pesquisados
@@ -101,8 +101,8 @@ function quantidadePostos() {
             mostrarTela("#mensagem", `Você pesquisou em ${postos} postos.`);
             input.style.display = 'none';
             botaoConfirmar.style.display = 'none';
-            limparEntrada(); // Limpa a caixa de entrada
-            valores(); // Chama a próxima função
+            limparEntrada();
+            valores();
         }
     };
 }
@@ -133,24 +133,24 @@ function valores() {
                     if (contador > postos) {
                         input.style.display = 'none';
                         botaoConfirmar.style.display = 'none';
-                        limparEntrada(); // Limpa a caixa de entrada
-                        media(); // Chama a próxima função
+                        limparEntrada();
+                        media();
                     } else {
-                        limparEntrada(); // Limpa a caixa de entrada
-                        pedirValorPosto(); // Pede o próximo valor
+                        limparEntrada();
+                        pedirValorPosto();
                     }
                 }
             };
         }
     }
-    pedirValorPosto(); // Inicia a solicitação dos preços
+    pedirValorPosto();
 }
 
 // Calcula a média de preços dos postos
 function media() {
     med = somaTotal / postos;
     mostrarTela("#mensagem", `A média dos preços encontrados é R$ ${med.toFixed(2)}`);
-    gastoDiario(); // Chama a próxima função
+    gastoDiario();
 }
 
 // Calcula o gasto diário baseado no menor preço

@@ -6,7 +6,7 @@ body {
 
     padding: 0;
 
-    /* Substitua "url('caminho/para/imagem.jpg')" pelo caminho real da sua imagem */
+
 
     background-image: url('./img/imgfundo1.jpg');
 
@@ -14,7 +14,7 @@ body {
 
     background-position: center;
 
-    /* Para garantir que a imagem inteira seja exibida */
+
 
     background-repeat: no-repeat;
 
@@ -44,7 +44,6 @@ body {
 
     background-color: rgba(192, 192, 192, 0.8);
 
-    /* Cinza prateado semi-transparente */
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
@@ -100,7 +99,7 @@ button {
 
     background-color: #FFA500;
 
-    /* Laranja futurístico */
+
 
     color: white;
 
@@ -116,11 +115,11 @@ button {
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-    /* Sombra futurística */
+
 
     transition: background-color 0.3s ease;
 
-    /* Transição suave na cor de fundo */
+
 
 }
 
@@ -130,7 +129,7 @@ button:hover {
 
     background-color: #FF8C00;
 
-    /* Laranja mais escuro no hover */
+
 
 }
 
