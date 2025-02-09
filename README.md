@@ -1,7 +1,9 @@
 # 🚗 Cálculo de Consumo de Combustível e Gasto Diário
 
-## 📌 Descrição do Projeto (Acadêmico) 
+## 📌 Descrição do Projeto (Acadêmico)
 Este projeto tem como objetivo auxiliar os colaboradores da FORD a calcularem o consumo de combustível e o gasto diário para deslocamento ao trabalho, além de encontrar o posto com o combustível mais barato e calcular a média de preços na região. O programa solicita informações do usuário e realiza os cálculos automaticamente.
+
+🔗 **Acesse o projeto aqui:** [Cálculo de Consumo de Combustível](https://leonsantana7.github.io/desafioLogicaFord/)
 
 ## 🛠️ Instalação e Execução
 
@@ -29,7 +31,6 @@ Basta abrir o arquivo `index.html` em qualquer navegador compatível para utiliz
 - Calcula o gasto diário com combustível baseado no menor valor pesquisado;
 - Previne erros na entrada de dados, como valores inválidos.
 
-
 ## 📂 Estrutura do Arquivo
 
 - `index.html`: Interface principal do programa.
@@ -40,7 +41,11 @@ Basta abrir o arquivo `index.html` em qualquer navegador compatível para utiliz
 
 - **HTML**: Estrutura da interface gráfica.
 - **JavaScript**: Implementação da lógica de cálculo e interatividade.
-- **CSS** (opcional): Estilização da aplicação.
+- **CSS** : Estilização da aplicação.
+
+## 🔍 Tratamento de NaN
+
+O código implementa um mecanismo de validação para garantir que as entradas do usuário sejam números válidos. Caso o usuário insira um valor inválido (NaN ou número negativo), uma mensagem de erro é exibida na tela solicitando uma nova entrada. Esse tratamento evita cálculos incorretos e melhora a experiência do usuário, garantindo que apenas valores apropriados sejam utilizados nas operações matemáticas.
 
 ## ✍️ Autores e Colaboradores
 - Leon Santana
