@@ -43,6 +43,10 @@ Basta abrir o arquivo `index.html` em qualquer navegador compatível para utiliz
 - **JavaScript**: Implementação da lógica de cálculo e interatividade.
 - **CSS** (opcional): Estilização da aplicação.
 
+## 🔍 Tratamento de NaN
+
+O código implementa um mecanismo de validação para garantir que as entradas do usuário sejam números válidos. Caso o usuário insira um valor inválido (NaN ou número negativo), uma mensagem de erro é exibida na tela solicitando uma nova entrada. Esse tratamento evita cálculos incorretos e melhora a experiência do usuário, garantindo que apenas valores apropriados sejam utilizados nas operações matemáticas.
+
 ## ✍️ Autores e Colaboradores
 - Leon Santana
 
