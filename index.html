@@ -4,13 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Logica - Leon</title>
-    <script src="/app.js"></script>
+    <title>Desafio Lógica - Leon</title>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+    <div class="container">
+        <div class="conteudo">
+            <div class="informacoes">
+                <h1>Cálculo de Consumo de Combustível e Gasto Diário</h1>
+            </div>
+            <p id="mensagem">Clique em "Iniciar" para começar.</p>
 
+            <input type="number" id="inputValor" min="1" class="input" style="display: none;"
+                placeholder="Digite aqui...">
+
+            <button id="confirmar" style="display: none;">Confirmar</button>
+
+            <br>
+
+            <button onclick="distanciaPercorrida()" class="caixaPerguntas">Iniciar</button>
+        </div>
+    </div>
 </body>
 
 </html>
