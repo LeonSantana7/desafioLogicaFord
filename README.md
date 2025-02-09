@@ -41,7 +41,7 @@ Basta abrir o arquivo `index.html` em qualquer navegador compatível para utiliz
 
 - **HTML**: Estrutura da interface gráfica.
 - **JavaScript**: Implementação da lógica de cálculo e interatividade.
-- **CSS** (opcional): Estilização da aplicação.
+- **CSS** : Estilização da aplicação.
 
 ## 🔍 Tratamento de NaN
 
