@@ -6,6 +6,7 @@ function mostrarTela(tag, texto) {
     }
 }
 
+
 // validar entradas
 function validarEntrada(tipo = 'float') {
     let entradaValida = false;
@@ -33,6 +34,12 @@ let distancia, consumo, consumoLitros, postos, valorMenor = Infinity, somaTotal 
 // limpar a caixa de entrada
 function limparEntrada() {
     document.getElementById("inputValor").value = "";
+}
+// alternar iniciar e reiniciar
+function mudarTextoBotao() {
+    const botao = document.querySelector('.caixaPerguntas');
+    botao.textContent = 'Reiniciar'; 
+    limparEntrada();
 }
 
 // inicia o cálculo
